@@ -22,15 +22,15 @@ public class CadastroController {
 
     public Handler post = (Context ctx)->{
         String nome = ctx.formParam("nome");
-        String cpf = ctx.formParam("cpf");
+        String email = ctx.formParam("email");
+        String telefone = ctx.formParam("telefone");
 
-        cadastro.add(new Pessoa(nome, cpf));
+        cadastro.add(new Pessoa(nome, email, telefone));
 
         Map<String,Object> dados = new HashMap<>();
 
-        dados.put("pessoas",cadastro.getPessoas());
-        
-        ctx.render("resposta.html",dados);
+        dados.put("mensagem", "Cadastro Realizations");
+        ctx.render("cadastro.html",dados);
 
     };
 

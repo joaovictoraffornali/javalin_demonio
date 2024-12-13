@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<br lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estilo.css">
-    <title>Agebndi0onwef</title>
+    <title>Listia</title>
 </head>
 <body>
-    <h1>Minha Agenda</h1>
-    <a href="/cadastro">Cadastro</a>
+    <ul>
+        <#list list as pessoas>
+            <li>${pessoa.nome} - ${pessoa.email} - ${pessoa.telefone}</li>
+        </#list>
+    </ul>
 </body>
 </html>
